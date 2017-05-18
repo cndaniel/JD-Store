@@ -8,7 +8,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all.order("created_at DESC")
+    @products = Product.all.order("position ASC")
   end
 
   def new
@@ -54,6 +54,18 @@ class Admin::ProductsController < ApplicationController
     @product.hide!
     redirect_to :back
   end
+
+  def move_up
+      @product = Product.find(params[:id])
+      @product.move_higher
+      redirect_to :back
+    end
+
+  def move_down
+    @product = Product.find(params[:id])
+    @product.move_lower
+    redirect_to :back
+   end
 
 
 
