@@ -3,7 +3,8 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :quantity, presence: true
   validates :price, numericality: { greater_than: 0}
-
+  # ---分类---
+  belongs_to :category
   # ---上传图片---
   mount_uploader :image, ImageUploader
   # ---产品列表位置调整---
