@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
 #---- 订单 ---
   has_many :orders
 
@@ -14,18 +15,18 @@ class User < ApplicationRecord
 # ---收藏功能---
   has_many :products
   has_many :collects
-  has_many :participated_prodcuts, :through => :collects, :source => :product
+  has_many :participated_products, :through => :collects, :source => :product
 
   def is_member_of?(product)
-    participated_prodcuts.include?(product)
+    participated_products.include?(product)
   end
 
   def join_collect!(product)
-    participated_prodcuts << product
+    participated_products << product
   end
 
   def quit_collect!(product)
-    participated_prodcuts.delete(product)
+    participated_products.delete(product)
   end
 
 end
