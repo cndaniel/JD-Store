@@ -25,6 +25,7 @@ class Product < ApplicationRecord
 
 
 #---- 收藏功能 ---
+  belongs_to :user
   has_many :collects
   has_many :members, through: :collects, source: :user
 end

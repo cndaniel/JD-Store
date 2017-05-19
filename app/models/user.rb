@@ -12,6 +12,7 @@ class User < ApplicationRecord
   end
 
 # ---收藏功能---
+  has_many :products
   has_many :collects
   has_many :participated_prodcuts, :through => :collects, :source => :product
 
@@ -26,5 +27,5 @@ class User < ApplicationRecord
   def quit_collect!(product)
     participated_prodcuts.delete(product)
   end
-  
+
 end
