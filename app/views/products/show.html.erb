@@ -16,15 +16,19 @@
     </div>
     <div> 数量 : <%= @product.quantity %> </div>
     <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div class="pull-right">
+    <div class="pull-left">
       <% if @product.quantity.present? && @product.quantity > 0 %>
       <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-primary btn-lg btn-danger") %>
       <% else %>
         已销售一空，无法购买
       <% end %>
-
-
-
+    </div>
+    <div class="pull-left">
+    <% if current_user && current_user.is_member_of?(@product) %>
+     <%= link_to("取消收藏", quit_product_path(@product), method: :post, class: "btn btn-xs btn-default pull-right") %>
+    <% else %>
+      <%= link_to("收藏",join_product_path(@product), method: :post, class: "btn btn-xs btn-default pull-right" ) %>
+    <% end %>
     </div>
   </div>
 </div>

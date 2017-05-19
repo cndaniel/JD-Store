@@ -5,13 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 #---- 订单 ---
   has_many :orders
+
 #----管理员---
   def admin?
     is_admin
   end
-end
-# ---收藏功能---
 
+# ---收藏功能---
   has_many :collects
   has_many :participated_prodcuts, :through => :collects, :source => :product
 
@@ -26,3 +26,5 @@ end
   def quit_collect!(product)
     participated_prodcuts.delete(product)
   end
+  
+end

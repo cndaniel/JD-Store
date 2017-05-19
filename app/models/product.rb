@@ -5,11 +5,14 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0}
   # ---分类---
   belongs_to :category
+
   # ---上传图片---
   mount_uploader :image, ImageUploader
+
   # ---产品列表位置调整---
   acts_as_list
-  # -----------
+
+  # --------隐藏---
   def publish!
     self.is_hidden = false
     self.save
@@ -19,4 +22,9 @@ class Product < ApplicationRecord
     self.is_hidden = true
     self.save
   end
+
+
+#---- 收藏功能 ---
+  has_many :collects
+  has_many :members, through: :collects, source: :user
 end

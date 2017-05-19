@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :jion, :quit]
 
   def show
     @product = Product.find(params[:id])
@@ -57,6 +57,24 @@ class ProductsController < ApplicationController
      redirect_to :back
    end
 
+  # --收藏--
+   def join
+     @product = Product.find(params[:id])
+      if !current_user.is_member_of?(@product)
+        current_user.join_collect!(@product)
+        flash[:notice] = "收藏成功"
+      end
+      redirect_to product_path(@product)
+    end
+
+    def quit
+      @product= Product.find(params[:id])
+      if current_user.is_member_of?(@product)
+        current_user.quit_collect!(@product)
+        flash[:alert] = "已移除收藏夹"
+      end
+      redirect_to product_path(@product)
+    end
 
 
   private
