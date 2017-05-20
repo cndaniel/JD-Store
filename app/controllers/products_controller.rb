@@ -14,6 +14,11 @@ class ProductsController < ApplicationController
     end
   end
 
+   def index
+     @q = Product.ransack(params[:q])
+        @products = @q.result(distinct: true)
+  end
+
   def new
     @product = Product.new
   end

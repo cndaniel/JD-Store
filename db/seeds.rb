@@ -10,7 +10,7 @@ if User.find_by(email: "wuxiao@123.com").nil?
 u = User.new
 u.email = "wuxiao@123.com"
 u.password = "111111"
-u.password_confirmation = "111111"
+u.password_confirmation = "wuxiao@123.com"
 u.is_admin = true
 u.save
 puts "Admin 已经建立好了，账号为#{u.email}, 密码为#{u.password}"
