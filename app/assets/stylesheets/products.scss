@@ -1,26 +1,6 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.bg-color1 {
-  background: #50514F;
-}
-
-.bg-color2 {
-  background: #F25F5C;
-}
-
-.bg-color3 {
-  background: #FFE066;
-}
-
-.bg-color4 {
-  background: #247BA0;
-}
-
-.bg-color5 {
-  background: #70C1B3;
-}
-
 
 /*搜索栏 购物车*/
 .header {
@@ -190,7 +170,7 @@
 
 /*轮播图*/
 .carousel {
-  width: 1200px;
+  width: 750px;
   margin: 0 auto;
 }
 .carousel .item {
@@ -206,5 +186,6 @@
 .orderList-item {
   float: left;
   width: 108px;
-  height: 42px;
+  height: 60px;
+  line-height: 60px;
 }
