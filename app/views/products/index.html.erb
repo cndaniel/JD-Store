@@ -1,4 +1,68 @@
 
+<!-- 头部-->
+<div class="header">
+  <div class="headerContent">
+    <div class="logo">
+      <a href="/products">拉枯山欢迎你</a>
+    </div>
+    <div class="search">
+      <form action="/products/search" accept-charset="UTF-8" method="get">
+		  	<input name="utf8" type="hidden" value="✓">
+		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+    <div class="cart-wrap">
+      <div class="cart">
+         <%= link_to carts_path do  %>
+            购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+         <% end %>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- 分类条-->
+<div class="menu ">
+  <ul class="menuList">
+    <li class="menuList-item">
+      <%= link_to("首页", products_path)%>
+    </li>
+    <% Category.all.each do |category| %>
+     <li class="menuList-item">
+       <%= link_to category.name, products_path(category: category.name), class: "link" %>
+     </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
     <div class="row">
       <% @products.each do |product| %>
@@ -61,13 +125,6 @@
   </div>
 </div>
 
-<div class="header">
-  <div class="headerContent">
-    <div class="headerContent-item headerContent-item1 bg-color1"></div>
-    <div class="headerContent-item headerContent-item2 bg-color2"></div>
-    <div class="headerContent-item headerContent-item3 bg-color3"></div>
-  </div>
-</div>
 
 <div class="menu bg-color1">
   <div class="menuList">
