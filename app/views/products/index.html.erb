@@ -3,21 +3,21 @@
 <div class="header">
   <div class="headerContent">
     <div class="logo">
-      <a href="/products">拉枯山欢迎你</a>
+      <a href="/products"><img src='<%= image_url '' %>' ></a>
     </div>
-    <div class="search">
-      <form action="/products/search" accept-charset="UTF-8" method="get">
-		  	<input name="utf8" type="hidden" value="✓">
-		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
-		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
-			</form>
-		</div>
     <div class="cart-wrap">
       <div class="cart">
          <%= link_to carts_path do  %>
             购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
          <% end %>
     </div>
+  </div>
+  <div class="search">
+    <form action="/products/search" accept-charset="UTF-8" method="get">
+      <input name="utf8" type="hidden" value="✓">
+      <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+      <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+    </form>
   </div>
 </div>
 </div>
@@ -26,7 +26,7 @@
 <div class="menu ">
   <ul class="menuList">
     <li class="menuList-item">
-      <%= link_to("首页", products_path)%>
+      <a href="/products"><img src='<%= image_url 'logo1.png' %>'</a>
     </li>
     <% Category.all.each do |category| %>
      <li class="menuList-item">
@@ -79,16 +79,8 @@
               </div>
                 <div class="card-content">
                     <h4 class="card-title">
-                     ¥ <%= product.price %>
-                    <br>
                     <%= product.title %>
                   </h4>
-              </div>
-
-              <div class="card-read-more">
-                  <a class="btn btn-link btn-block" href="#">
-                      视频介绍
-                  </a>
               </div>
           </div>
         </div>

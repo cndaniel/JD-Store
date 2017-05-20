@@ -63,7 +63,7 @@
 }
 
 .search {
-  float: left; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
+  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
   width: 400px;
   margin-left: 40px; /*右边距*/
   margin-top: 10px; /*上边距*/
@@ -104,7 +104,7 @@
 
 
 .cart-wrap {
-  float: left; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
+  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
   margin-top: 10px; /*上边距*/
   margin-left: 238px; /*左边距*/
 }
@@ -139,20 +139,21 @@
 /*菜单*/
 .menu {
   width: 100%;
-  background: #212121;
+  background: #131418;
 }
 
 .menuList {
-  width: 1200px;
+  width: 1400px;
   margin: 20px auto;
-  height: 42px;
-  line-height: 42px;
+  height: 65px;
+  line-height: 65px;
 }
 
 .menuList-item {
   float: left;
   width: 108px;
   height: 42px;
+  margin-right: 30px;
 }
 
 .menu a {
@@ -241,7 +242,7 @@
 .img-card img{
  width: 100%;
  height: 200px;
- object-fit: contain;
+ object-fit: cover;
  transition: all .25s ease;
 }
 .thumbnail {
