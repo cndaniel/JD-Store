@@ -79,8 +79,8 @@
 .cart {
   padding: 8px 20px; /*加内边距*/
   cursor: pointer; /*鼠标一上去，显示手型*/
-  border: 1px solid #e1eadf; /*1像素，实线，灰色*/
-  background: #e1eadf; /*灰色背景*/
+  border: 1px solid #F2F9F1; /*1像素，实线，灰色*/
+  background: #F2F9F1; /*灰色背景*/
   font-size: 12px; /*字体小一点好看*/
 }
 
@@ -146,7 +146,7 @@
  display: block;
  margin-bottom: 50px;
  line-height: 1.42857143;
- background-color: #e1eadf;
+ background-color: #F2F9F1;
  border-radius: 15px;
  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
  transition: box-shadow .25s;
@@ -190,9 +190,11 @@
 
 /*轮播图*/
 .carousel {
-  margin: 20px auto;
   width: 1200px;
-  height: 400px;
+  margin: 0 auto;
+}
+.carousel .item {
+  height: 375px;
 }
 
 /*排序*/
