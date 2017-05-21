@@ -37,8 +37,8 @@
   }
   .navbar-default {
 
-      background-color: #F2F9F1;
-      border-color: #F2F9F1;
+      background-color: #EAEAEA;
+      border-color: #EAEAEA;
       margin-bottom: 0;
       border-radius: 0;
   }
@@ -76,28 +76,32 @@
   .navbar-default .navbar-nav > .open > a,
   .navbar-default .navbar-nav > .open > a:focus,
   .navbar-default .navbar-nav > .open > a:hover {
-      background-color: #212121;
-      color: #FAFAFA;
+      background-color: #F2F9F1;
+      color: #212121;
   }
 
 
 //---------Box---------
   .row {
     padding-top: 0;
+
   }
 
   .box {
-        background-image: image-url("header.jpg");
+        background-image: image-url("header1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        margin-bottom: 50px;
+        margin-bottom: 200px;
   }
 
   .box-inner {
       background-color: rgba(250, 250, 250, 0.69);
       padding-bottom: 5px;
-      margin-top: 150px;
-      margin-bottom: 150px;
+      margin-top: 300px;
+      margin-bottom: 300px;
+      width: 300px;
+      border-radius: 20px;
+
   }
 
   .title {
@@ -105,14 +109,7 @@
       margin-bottom: 80px;
   }
 
-  .slogan {
-      color: #222;
-      margin-top: 10px;
-      margin-bottom: 50px;
-      text-align: center;
-      font-size: 25px;
-      top: 12px;
-  }
+
 
   .lead {
       margin-bottom: 60px;
@@ -122,23 +119,43 @@
 
 
   //---------Content---------
+  .content-section {
+   background-color: #EAEAEA;
+   padding-bottom: 200px;
+  }
+
+  .content-section-pic {
+    border-color: #EAEAEA;
+    background-color: #EAEAEA;
+    text-align: center;
+
+
+  }
+  .content-section-pic img{
+    width: 60%;
+  }
+
+  .caption{
+  margin-top: 40px;
+  }
 
   .content-section-a {
-      padding: 50px 0;
-      background-color: #f8f8f8;
+      padding: 200px 0;
+      background-color: #EAEAEA;
+      border-top: 1px solid #D3D4D8;
   }
 
   .content-section-b {
-      background-color: #ffffff;
-      padding: 50px 0;
-      border-top: 1px solid #e7e7e7;
-      border-bottom: 1px solid #e7e7e7;
+      background-color: #EAEAEA;
+      padding: 200px 0;
+      border-top: 1px solid #D3D4D8;
+      border-bottom: 1px solid #D3D4D8;
   }
 
   .section-heading-spacer {
       float: left;
       width: 200px;
-      border-top: 3px solid #e7e7e7;
+
   }
 
   .section-heading {
@@ -150,6 +167,22 @@
       font-weight: 400;
   }
 
+  /*轮播图*/
+  .content-section-c {
+    background-color: #EAEAEA;
+    border-top: 1px solid #D3D4D8;
+  }
+  .carousel {
+    width: 750px;
+    margin: 0 auto;
+
+  }
+  .carousel .item {
+    height: 375px;
+
+  }
+
+
   //---------Footer---------
 
   .footer {
@@ -158,7 +191,7 @@
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 100px;
-    background-color: #F2F9F1;
+    background-color: #EAEAEA;
     }
 
     p {
