@@ -1,10 +1,86 @@
 
+<!-- 头部-->
+<div class="header">
+  <div class="headerContent">
+    <div class="cart-wrap">
+      <div class="cart">
+         <%= link_to carts_path do  %>
+            购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+         <% end %>
+    </div>
+  </div>
+  <div class="search">
+    <form action="/products/search" accept-charset="UTF-8" method="get">
+      <input name="utf8" type="hidden" value="✓">
+      <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+      <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+</div>
+
+<!-- 分类条-->
+<div class="menu ">
+  <ul class="menuList">
+    <li class="menuList-item">
+      <a href="/products"><img src='<%= image_url 'logo1.png' %>'</a>
+    </li>
+    <li class="menuList-item">
+      <a href="/products">全部商品</a>
+    </li>
+    <% Category.all.each do |category| %>
+     <li class="menuList-item">
+       <%= link_to category.name, products_path(category: category.name), class: "link" %>
+     </li>
+    <% end %>
+  </ul>
+</div>
+
+<!-- 轮播图 -->
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+ </ol>
+ <div class="carousel-inner">
+    <div class="item active">
+     <a href="javascript:;">
+      <img src="https://ooo.0o0.ooo/2017/05/21/592075a7a571e.png" alt="mmexport1494312512566.png" title="mmexport1494312512566.png" />
+      <div class="carousel-caption"></div>
+     </a>
+    </div>
+    <div class="item">
+     <a href="javascript:;">
+      <img src="https://ooo.0o0.ooo/2017/05/21/592075a819908.png" alt="mmexport1494312531611.png" title="mmexport1494312531611.png" />
+      <div class="carousel-caption"></div>
+     </a>
+    </div>
+    <div class="item">
+     <a href="javascript:;">
+      <img src="https://ooo.0o0.ooo/2017/05/21/592075b13e30c.png" alt="mmexport1494312510312.png" title="mmexport1494312510312.png" />
+      <div class="carousel-caption"></div>
+     </a>
+    </div>
+  </div>
+</div>
+
+<!-- 排序 -->
+<div class="orderList">
+  <div class="orderList-item "><h4><strong>商品排序:</strong></h4></div>
+  <div class="orderList-item "><h4><strong>新品</strong></h4></div>
+  <div class="orderList-item "><h4><strong>销量</strong></h4></div>
+  <div class="orderList-item "><h4><strong>价格</strong></h4></div>
+</div>
+
+
+<!-- productList -->
 <div class="container">
     <div class="row">
       <% @products.each do |product| %>
-        <div class="col-xs-12 col-sm-4">
-            <div class="card">
-              <div class="img-card">
+        <div class="col-xs-12 col-sm-3">
+            <div class="productList">
+              <div class="img-productList">
               <%= link_to product_path(product) do %>
               <% if product.image.present? %>
               <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -13,91 +89,13 @@
               <% end %>
               <% end %>
               </div>
-                <div class="card-content">
-                    <h4 class="card-title">
-                     ¥ <%= product.price %>
-                    <br>
+                <div class="productList-content">
+                    <h4 class="productList-title">
                     <%= product.title %>
                   </h4>
-              </div>
-
-              <div class="card-read-more">
-                  <a class="btn btn-link btn-block" href="#">
-                      视频介绍
-                  </a>
               </div>
           </div>
         </div>
         <% end %>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  <div class="navbar bg-color1">
-  <div class="navbarContent">
-    <div class="navbarContent-left bg-color2"></div>
-    <div class="navbarContent-right bg-color3"></div>
-  </div>
-</div>
-
-<div class="header">
-  <div class="headerContent">
-    <div class="headerContent-item headerContent-item1 bg-color1"></div>
-    <div class="headerContent-item headerContent-item2 bg-color2"></div>
-    <div class="headerContent-item headerContent-item3 bg-color3"></div>
-  </div>
-</div>
-
-<div class="menu bg-color1">
-  <div class="menuList">
-    <div class="menuList-item bg-color2"></div>
-    <div class="menuList-item bg-color3"></div>
-    <div class="menuList-item bg-color4"></div>
-    <div class="menuList-item bg-color5"></div>
-  </div>
-</div>
-
-<div class="carousel bg-color1"></div>
-
-<div class="orderList bg-color1">
-  <div class="orderList-item bg-color2"></div>
-  <div class="orderList-item bg-color3"></div>
-  <div class="orderList-item bg-color4"></div>
-  <div class="orderList-item bg-color5"></div>
-</div>
-
-<div class="productList">
-  <div class="productList-item bg-color1"></div>
-  <div class="productList-item bg-color2"></div>
-  <div class="productList-item bg-color3"></div>
-  <div class="productList-item bg-color4"></div>
-  <div class="productList-item bg-color5 productList-lastItem"></div>
-  <div class="productList-item bg-color1"></div>
-  <div class="productList-item bg-color2"></div>
-  <div class="productList-item bg-color3"></div>
-  <div class="productList-item bg-color4"></div>
-  <div class="productList-item bg-color5 productList-lastItem"></div>
-</div>
-
-<div class="footer bg-color1"></div>-->
