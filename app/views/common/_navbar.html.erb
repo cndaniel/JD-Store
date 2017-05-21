@@ -5,18 +5,16 @@
             <a class="navbar-brand" href="/"><strong>拉祜山欢迎你</strong></a>
         </div>
 
+        <!-- product search function -->
+        <form class="navbar-form navbar-left" role="search">
+           <%= search_form_for @q do |f| %>
+           <%= f.search_field :title_cont %>
+           <%= f.submit %>
+           <% end %>
+        </form>
+
         <!-- Collect the nav links, forms, and other content for toggling   -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-      <!-- product search function -->
-      <form class="navbar-form navbar-left" role="search">
-         <%= search_form_for @q do |f| %>
-         <%= f.search_field :title_cont %>
-         <%= f.submit %>
-         <% end %>
-     </form>
-      <!-- end -->
 
             <ul class="nav navbar-nav navbar-right">
 

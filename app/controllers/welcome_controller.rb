@@ -1,7 +1,5 @@
 class WelcomeController < ApplicationController
-
   def index
-    @q = Product.ransack(params[:q])
+  @q = Product.ransack(params[:q])
   end
-
 end
