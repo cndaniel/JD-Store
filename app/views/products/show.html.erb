@@ -9,13 +9,13 @@
     </div>
   </div>
   <div class="search">
-    <form action="/products/search" accept-charset="UTF-8" method="get">
-      <input name="utf8" type="hidden" value="✓">
-      <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
-      <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
+     <%= form_tag search_products_path , :method => :get, :class => "products-search-form" do %>
+         <input name="utf8" type="hidden" value="✓">
+         <input type="text" class="search-input" name="q" value="<%= params[:q] %>" placeholder="输入你要搜索的商品">
+         <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+     <% end %>
+   </div>
+ </div>
 </div>
 
 <!-- 分类条-->
