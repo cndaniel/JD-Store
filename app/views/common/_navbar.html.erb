@@ -5,9 +5,21 @@
             <a class="navbar-brand" href="/"><strong>拉祜山欢迎你</strong></a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling   -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+
+
+      <!-- product search function -->
+      <form class="navbar-form navbar-left" role="search">
+         <%= search_form_for @q do |f| %>
+         <%= f.search_field :title_cont %>
+         <%= f.submit %>
+         <% end %>
+     </form>
+      <!-- end -->
+
+            <ul class="nav navbar-nav navbar-right">
+
              <li>
                   <li>
                     <%= link_to("我收藏的商品", account_products_path) %>
