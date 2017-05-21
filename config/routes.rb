@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
   devise_for :users
-
+#--管理员--
   namespace :admin do
     resources :orders do
      member do
@@ -21,14 +21,24 @@ Rails.application.routes.draw do
     end
   end
 
+#--用户--
   resources :products do
     member do
       post :add_to_cart
       post :join
       post :quit
     end
+    collection do
+      get :search
+    end
   end
 
+  namespace :account do
+   resources :orders
+   resources :products
+ end
+
+#--购物车--
   resources :carts do
     collection do
       delete :clean
@@ -38,6 +48,7 @@ Rails.application.routes.draw do
 
   resources :cart_items
 
+#-- 订单 --
   resources :orders do
     member do
       post :pay_with_alipay
@@ -46,9 +57,5 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :account do
-   resources :orders
-   resources :products
- end
 
 end
