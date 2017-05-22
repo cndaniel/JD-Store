@@ -23,16 +23,16 @@
 <!-- 分类条-->
 <div class="menu ">
   <ul class="menuList">
-    <li class="menuList-item">
-      <a href="/products"><img src='<%= image_url 'logo1.png' %>'</a>
-    </li>
-    <li class="menuList-item">
+    <ol class="menuList-item">
+      <a href="/"><img src='<%= image_url 'logo1.png' %>'</a>
+    </ol>
+    <ol class="menuList-item">
       <a href="/products">全部商品</a>
-    </li>
+    </ol>
     <% Category.all.each do |category| %>
-     <li class="menuList-item">
+     <ol class="menuList-item">
        <%= link_to category.name, products_path(category: category.name), class: "link" %>
-     </li>
+     </ol>
     <% end %>
   </ul>
 </div>
@@ -40,10 +40,10 @@
 
 <!-- 排序 -->
 <div class="orderList">
-  <div class="orderList-item "><h4><strong>商品排序:</strong></h4></div>
-  <div class="orderList-item "><h4><strong>新品</strong></h4></div>
-  <div class="orderList-item "><h4><strong>销量</strong></h4></div>
-  <div class="orderList-item "><h4><strong>价格</strong></h4></div>
+  <div class="orderList-item "><h4><strong></strong></h4></div>
+  <div class="orderList-item "><h4><strong></strong></h4></div>
+  <div class="orderList-item "><h4><strong></strong></h4></div>
+  <div class="orderList-item "><h4><strong></strong></h4></div>
 </div>
 
 
