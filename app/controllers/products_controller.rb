@@ -69,7 +69,7 @@ class ProductsController < ApplicationController
      @product = Product.find(params[:id])
       if !current_user.is_member_of?(@product)
         current_user.join_collect!(@product)
-        flash[:notice] = "收藏成功"
+
       end
       redirect_to product_path(@product)
     end
@@ -78,7 +78,7 @@ class ProductsController < ApplicationController
       @product= Product.find(params[:id])
       if current_user.is_member_of?(@product)
         current_user.quit_collect!(@product)
-        flash[:alert] = "已移除收藏夹"
+        
       end
       redirect_to product_path(@product)
     end
@@ -87,7 +87,7 @@ class ProductsController < ApplicationController
 
 def search
     if @query_string.present?
-      search_result = Product.ransack(@search_criteria).result(:distinct => true)
+      search_result = Product.where(:is_hidden => false).ransack(@search_criteria).result(:distinct => true)
       @products = search_result.paginate(:page => params[:page], :per_page => 5 )
     end
   end

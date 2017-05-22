@@ -20,7 +20,10 @@
 
              <li>
                   <li>
-                    <%= link_to("我收藏的商品", account_products_path) %>
+                    <%= link_to("已收藏的商品", account_products_path) %>
+                  </li>
+                  <li style="line-height: 50px;">
+                  (<%= current_user.collects.count %>)
                   </li>
                   <li>
                      <%= link_to("个人订单列表", account_orders_path ) %>
