@@ -82,14 +82,11 @@
 
 
 //---------Box---------
-  .row {
-    padding-top: 0;
-
-  }
+  
 
   .box {
         background-image: image-url("header1.jpg");
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 200px;
   }
@@ -109,6 +106,14 @@
       margin-bottom: 80px;
   }
 
+  .slogan {
+           color: #222;
+           margin-top: 10px;
+           margin-bottom: 50px;
+           text-align: center;
+           font-size: 25px;
+           top: 12px;
+       }
 
 
   .lead {
