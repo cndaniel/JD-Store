@@ -82,7 +82,7 @@
 
 
 //---------Box---------
-  
+
 
   .box {
         background-image: image-url("header1.jpg");
@@ -126,7 +126,7 @@
   //---------Content---------
   .content-section {
    background-color: #EAEAEA;
-   padding-bottom: 200px;
+   padding-bottom: 400px;
   }
 
   .content-section-pic {
@@ -191,12 +191,12 @@
 
   //---------Footer---------
 
-  .footer {
+  .footer-style {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 100px;
+    height: 145px;
     background-color: #EAEAEA;
     }
 
