@@ -72,7 +72,7 @@ class ProductsController < ApplicationController
       @product= Product.find(params[:id])
       if current_user.is_member_of?(@product)
         current_user.quit_collect!(@product)
-        
+
       end
       redirect_to product_path(@product)
     end
