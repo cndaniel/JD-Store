@@ -15,14 +15,12 @@ class ProductsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
+
   def index
           @q = Product.ransack(params[:q])
           @products = @q.result(distinct: true)
     end
 
-=======
->>>>>>> 6568ae16b978c735a185acb0792b27bd9e74c2f0
   def new
     @product = Product.new
   end
