@@ -15,12 +15,6 @@ class ProductsController < ApplicationController
     end
   end
 
-
-  def index
-          @q = Product.ransack(params[:q])
-          @products = @q.result(distinct: true)
-    end
-
   def new
     @product = Product.new
   end
@@ -78,7 +72,7 @@ class ProductsController < ApplicationController
       @product= Product.find(params[:id])
       if current_user.is_member_of?(@product)
         current_user.quit_collect!(@product)
-        
+
       end
       redirect_to product_path(@product)
     end
