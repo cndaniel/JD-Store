@@ -220,6 +220,7 @@
       margin-top: 30px;
     }
 
+   //---back to top---
     #gotop {
   width: 50px;
   height: 50px;
@@ -229,4 +230,32 @@
   background: none;
   cursor: pointer;
   display: none; /*默认先隐藏掉*/
-}
+  }
+
+  //--- 登录页面  ----
+  .log-page-bg {
+    height: 1200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(https://ooo.0o0.ooo/2017/05/24/59250bb49d5a9.jpg)
+    }
+
+   .log-page {
+
+    margin-top: 100px;
+    color: #03151e;
+    font-size: 20px;
+    background-color: rgba(250, 250, 250, 0.69);//transparent;//背景颜色含透明度
+    border-radius: 10px;
+
+    }
+
+    .form-inputs {
+
+    margin-bottom: 0px;//这样就可以紧接息面的描述文字
+    border-top-right-radius: 3px;//右上角圆边
+    border-top-left-radius: 3px;//左上角圆边
+    padding-bottom: 10px;
+
+    }
