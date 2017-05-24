@@ -36,7 +36,7 @@
      transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
    }
    a:hover {
-     color: #7f8c8d;
+     color: #FF6F00;
      transition: 0.5s;                                 // 鼠标指向时 0.5面渐变
      text-decoration: none;                            // 移除下划线
    }
@@ -45,32 +45,28 @@
 
 
  //---------Navbar---------
-  .navbar {
+  .navbar-style {
     height: 80px;
-  }
-  .navbar-default {
-
-      background-color: #EAEAEA;
-      border-color: #EAEAEA;
-      margin-bottom: 0;
-      border-radius: 0;
+    background-color: #EAEAEA;
+    border-color: transparent;                          //边框颜色设置为 透明
   }
 
-  .navbar-default .navbar-brand {
-      color: #212121;
-      padding: 10px 15px;
-      line-height: 30px;
+  .navbar-brand {
+      color: #d76363;
+      line-height: 50px;
+      letter-spacing: 0.5em;                      //拉开一点点字间距
+      font-weight:lighter;                        //字体粗细比默认样式缩小100磅值，让logo显得精致高级
 
   }
 
-  .navbar-default .navbar-brand:hover,
-  .navbar-default .navbar-brand:focus {
+  .navbar-brand:hover,
+  .navbar-brand:focus {
       color: #FF6F00;
       background-color: transparent;
   }
 
   .navbar-default .navbar-nav > li > a {
-      color: #212121;
+   padding: 25px 20px;
   }
 
   .navbar-default .navbar-nav > li > a:hover,
@@ -86,13 +82,9 @@
       background-color: #212121;
   }
 
-  .navbar-default .navbar-nav > .open > a,
-  .navbar-default .navbar-nav > .open > a:focus,
-  .navbar-default .navbar-nav > .open > a:hover {
-      background-color: #F2F9F1;
-      color: #212121;
-  }
-
+   .navbar-collapse {
+     border-color: #FF6F00;
+   }
 
 //---------Box---------
 
@@ -110,7 +102,7 @@
       padding-bottom: 5px;
       margin-top: 300px;
       margin-bottom: 300px;
-      width: 300px;
+      width: 400px;
       border-radius: 20px;
 
   }
@@ -118,6 +110,11 @@
   .title {
       text-align: center;
       margin-bottom: 80px;
+      letter-spacing: 0.5em;                              //拉开一点点字间距
+      font-weight:lighter;                                //字体粗细比默认样式缩小100磅值，让logo显得精致高级
+      font-size: 3.0em;
+      color: #d76363;
+      line-height: 50px;
   }
 
   .slogan {
@@ -248,14 +245,59 @@
     font-size: 20px;
     background-color: rgba(250, 250, 250, 0.69);//transparent;//背景颜色含透明度
     border-radius: 10px;
-
+    padding-left: 40px;
+    padding-right: 40px;
     }
 
     .form-inputs {
 
     margin-bottom: 0px;//这样就可以紧接息面的描述文字
-    border-top-right-radius: 3px;//右上角圆边
-    border-top-left-radius: 3px;//左上角圆边
+    border-radius: 10px;
     padding-bottom: 10px;
 
+    }
+
+
+    .form-actions{
+
+    }
+
+
+    .restfont{
+    padding-bottom: 20px;
+    }
+
+    //---搜索--
+    #custom-search-input {
+        padding: 1px;
+        border: solid 2px #e5e4e4;
+        border-radius: 3px;
+        background-color: #fff;
+        margin-top: 9px;
+
+    }
+
+    #custom-search-input input {
+        border: 0;
+        box-shadow: none
+    }
+
+    #custom-search-input button {
+        margin: 2px 0;
+        background: none;
+        box-shadow: none;
+        border: 0;
+        color: #666666;
+        padding: 0 8px 0 10px;
+        border-left: solid 1px #ccc
+    }
+
+    #custom-search-input button:hover {
+        border: 0;
+        box-shadow: none;
+        border-left: solid 1px #ccc
+    }
+
+    #custom-search-input .glyphicon-search {
+        font-size: 15px
     }
