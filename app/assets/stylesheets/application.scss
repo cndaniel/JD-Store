@@ -17,6 +17,7 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+ @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
 
  //--- Footer always on the bottom---
  html {
@@ -25,39 +26,47 @@
   }
 
   body {
-    /* Margin bottom by footer height */
-    margin-bottom: 100px;
+    margin-bottom: 160px;
+    min-height: 100%;                                   // footer固定底部
+    font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
+    color: #666;                                        // 修改全站的 字体主色
+    font-size: 1.5em;                                   // 网站所有字体缩小比例
+   a {                                                 // 所有a标签统一样式
+     color: #666;                                      // 链接反转的样式
+     transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
+   }
+   a:hover {
+     color: #FF6F00;
+     transition: 0.5s;                                 // 鼠标指向时 0.5面渐变
+     text-decoration: none;                            // 移除下划线
+   }
   }
 
 
 
  //---------Navbar---------
-  .navbar {
-    height: 40px;
-  }
-  .navbar-default {
-
-      background-color: #EAEAEA;
-      border-color: #EAEAEA;
-      margin-bottom: 0;
-      border-radius: 0;
+  .navbar-style {
+    height: 80px;
+    background-color: #EAEAEA;
+    border-color: transparent;                          //边框颜色设置为 透明
   }
 
-  .navbar-default .navbar-brand {
-      color: #212121;
-      padding: 10px 15px;
-      line-height: 30px;
+  .navbar-brand {
+      color: #d76363;
+      line-height: 50px;
+      letter-spacing: 0.5em;                      //拉开一点点字间距
+      font-weight:lighter;                        //字体粗细比默认样式缩小100磅值，让logo显得精致高级
 
   }
 
-  .navbar-default .navbar-brand:hover,
-  .navbar-default .navbar-brand:focus {
+  .navbar-brand:hover,
+  .navbar-brand:focus {
       color: #FF6F00;
       background-color: transparent;
   }
 
   .navbar-default .navbar-nav > li > a {
-      color: #212121;
+   padding: 25px 20px;
   }
 
   .navbar-default .navbar-nav > li > a:hover,
@@ -73,25 +82,19 @@
       background-color: #212121;
   }
 
-  .navbar-default .navbar-nav > .open > a,
-  .navbar-default .navbar-nav > .open > a:focus,
-  .navbar-default .navbar-nav > .open > a:hover {
-      background-color: #F2F9F1;
-      color: #212121;
-  }
-
+   .navbar-collapse {
+     border-color: #FF6F00;
+   }
 
 //---------Box---------
-  .row {
-    padding-top: 0;
 
-  }
 
   .box {
         background-image: image-url("header1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 200px;
+        padding-bottom: 100px;
   }
 
   .box-inner {
@@ -99,7 +102,7 @@
       padding-bottom: 5px;
       margin-top: 300px;
       margin-bottom: 300px;
-      width: 300px;
+      width: 400px;
       border-radius: 20px;
 
   }
@@ -107,8 +110,21 @@
   .title {
       text-align: center;
       margin-bottom: 80px;
+      letter-spacing: 0.5em;                              //拉开一点点字间距
+      font-weight:lighter;                                //字体粗细比默认样式缩小100磅值，让logo显得精致高级
+      font-size: 3.0em;
+      color: #d76363;
+      line-height: 50px;
   }
 
+  .slogan {
+           color: #222;
+           margin-top: 10px;
+           margin-bottom: 50px;
+           text-align: center;
+           font-size: 25px;
+           top: 12px;
+       }
 
 
   .lead {
@@ -121,7 +137,8 @@
   //---------Content---------
   .content-section {
    background-color: #EAEAEA;
-   padding-bottom: 200px;
+   padding-bottom: 500px;
+
   }
 
   .content-section-pic {
@@ -186,12 +203,12 @@
 
   //---------Footer---------
 
-  .footer {
+  .footer-style {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 100px;
+    height: 160px;
     background-color: #EAEAEA;
     }
 
@@ -200,6 +217,7 @@
       margin-top: 30px;
     }
 
+   //---back to top---
     #gotop {
   width: 50px;
   height: 50px;
@@ -209,4 +227,77 @@
   background: none;
   cursor: pointer;
   display: none; /*默认先隐藏掉*/
-}
+  }
+
+  //--- 登录页面  ----
+  .log-page-bg {
+    height: 1200px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(https://ooo.0o0.ooo/2017/05/24/59250bb49d5a9.jpg)
+    }
+
+   .log-page {
+
+    margin-top: 100px;
+    color: #03151e;
+    font-size: 20px;
+    background-color: rgba(250, 250, 250, 0.69);//transparent;//背景颜色含透明度
+    border-radius: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    }
+
+    .form-inputs {
+
+    margin-bottom: 0px;//这样就可以紧接息面的描述文字
+    border-radius: 10px;
+    padding-bottom: 10px;
+
+    }
+
+
+    .form-actions{
+
+    }
+
+
+    .restfont{
+    padding-bottom: 20px;
+    }
+
+    //---搜索--
+    #custom-search-input {
+        padding: 1px;
+        border: solid 2px #e5e4e4;
+        border-radius: 3px;
+        background-color: #fff;
+        margin-top: 9px;
+
+    }
+
+    #custom-search-input input {
+        border: 0;
+        box-shadow: none
+    }
+
+    #custom-search-input button {
+        margin: 2px 0;
+        background: none;
+        box-shadow: none;
+        border: 0;
+        color: #666666;
+        padding: 0 8px 0 10px;
+        border-left: solid 1px #ccc
+    }
+
+    #custom-search-input button:hover {
+        border: 0;
+        box-shadow: none;
+        border-left: solid 1px #ccc
+    }
+
+    #custom-search-input .glyphicon-search {
+        font-size: 15px
+    }
