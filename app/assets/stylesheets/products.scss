@@ -2,115 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*搜索栏 购物车*/
-.header {
-  width: 1200px;
-  margin: 50px auto;
-
-}
-.headerContent {
-  height: 60px;
-}
-
-.search {
-  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
-  width: 500px;
-  margin-top: 10px; /*上边距*/
-  position: relative; /*相对定位*/
-
-}
-
-.search-input {
-  width: 500px;
-  height: 50px;
-  line-height: 50px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
-  color: #131418;
-  padding: 4px 20px; /*调一下上下左右边距*/
-  border-width: 2px; /*边框宽度为2px*/
-  border-color: #212121; /*设置边框颜色为红色*/
-  border-style: solid; /*设置为实线*/
-  font-size: 14px; /*字体14px*/
-  font-family: "microsoft yahei"; /*设置成微软雅黑字体*/
-  border-radius: 20px; /*圆角20px*/
-}
-
-.search-button {
-  width: 54px;
-  height: 50px;
-  border: none; /*去掉button默认的border*/
-  background: none; /*去掉button默认的背景颜色*/
-  font-family: "Microsoft YaHei";
-  font-size: 16px;
-  position: absolute; /*绝对定位*/
-  cursor: pointer; /*鼠标一上去，显示手型*/
-  top: 0;
-  right: 0;
-}
-
-.search-button .fa-search {
-  color: #131418; /*搜索图标的颜色*/
-}
-
-.cart-wrap {
-  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
-  margin-top: 15px; /*上边距*/
-  margin-left: 80px; /*左边距*/
-}
-
-.cart {
-  padding: 8px 20px; /*加内边距*/
-  cursor: pointer; /*鼠标一上去，显示手型*/
-  border: 1px solid #F2F9F1; /*1像素，实线，灰色*/
-  background: #F2F9F1; /*灰色背景*/
-  font-size: 12px; /*字体小一点好看*/
-}
-
-.fa-shopping-cart {
-  color: #131418; /*红色图标*/
-  font-size: 16px; /*图标大一点好看*/
-  margin-right: 10px; /*右边距*/
-}
-
-.cart a {
-  color: #6D6D6D; /*灰色字体*/
-  text-decoration: none; /*不要下划线*/
-}
-
-.cart a:hover {
-  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
-  text-decoration: none;
-}
-
-
-/*分类行*/
-
-.menu {
-  width: 100%;
-  background: #EAEAEA;
-}
-
-.menuList {
-  width: 1400px;
-  margin: 20px auto;
-  height: 65px;
-  line-height: 65px;
-}
-
-.menuList-item {
-  float: left;
-  width: 120px;
-  margin-right: 30px;
-}
-
-
-.menu a {
-  font-size: 20px;
-  color: #000; /*灰色字体*/
-}
-.menu a:hover {
-  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
-  text-decoration: none; /*不要下划线*/
-}
 
 
 //-- product/index产品列表样式 --//
@@ -118,8 +9,6 @@
     padding-left: 0;
     padding-right: 0;
   }
-
-
 
 .productList {
  display: block;
@@ -189,10 +78,8 @@
 /*商品信息*/
 
 .location {
-	line-height: 30px;
-	padding-bottom: 3px;
+	line-height: 40px;
   font-size: 20px;
-  font-style: italic;
 
 }
 

@@ -26,8 +26,8 @@
   }
 
   body {
-    margin-bottom: 160px;
-    min-height: 100%;                                   // footer固定底部
+
+    padding-top: 80px;                                  // 腾出navbar的遮挡空间
     font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
     color: #666;                                        // 修改全站的 字体主色
     font-size: 1.5em;                                   // 网站所有字体缩小比例
@@ -95,6 +95,7 @@
         background-size: cover;
         margin-bottom: 200px;
         padding-bottom: 100px;
+        padding-top: 10px;
   }
 
   .box-inner {
@@ -208,7 +209,7 @@
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 160px;
+    height: 170px;
     background-color: #EAEAEA;
     }
 
@@ -257,15 +258,11 @@
 
     }
 
-
-    .form-actions{
-
-    }
-
-
     .restfont{
     padding-bottom: 20px;
     }
+
+
 
     //---搜索--
     #custom-search-input {
@@ -300,4 +297,11 @@
 
     #custom-search-input .glyphicon-search {
         font-size: 15px
+    }
+
+    /* 购物车*/
+    
+    .fa-shopping-cart {
+      color: #131418; /*红色图标*/
+      margin-right: 10px; /*右边距*/
     }
