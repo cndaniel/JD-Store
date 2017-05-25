@@ -50,7 +50,7 @@
 
 .productList-content {
  padding:15px;
- text-align:left;
+ text-align: center;
 }
 
 .productList-title {
@@ -65,18 +65,7 @@
 }
 
 
-/*排序*/
-.orderList {
-  margin: 40px auto;
-  width: 1200px;
-  overflow: hidden;
-}
-.orderList-item {
-  float: left;
-  width: 108px;
-  height: 60px;
-  line-height: 60px;
-}
+
 
 //product-detail
 
@@ -86,6 +75,72 @@
   font-size: 20px;
 
 }
+
+//页面头部微调
+.product-show {
+  margin-top: 1em;
+}
+
+// 商品标题样式
+.product-title {
+  color: #7f8c8d;
+  letter-spacing: 0.5em;
+}
+
+// 商品简述样式
+.product-description {
+  margin: 1.5em auto 3em;
+  line-height: 3em;
+  letter-spacing: 0.5em;
+}
+
+// 商品价格样式
+.product-price-bgcolor {
+  background-color: #ddd;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
+}
+
+.product-price {
+  font-size: 3em;
+  font-weight: lighter;
+  color: #7f8c8d;
+ }
+
+  //商品库存样式
+  .product-quantity {
+    margin: 1.5em auto;
+  }
+
+  // 按钮区域样式
+.add-to-cart-buttom {
+  margin: 1em auto 5em;
+  }
+
+
+  // 收藏按钮
+.product-collection {
+  line-height: 2em;
+  }
+
+//---商品详情区--
+.product-particulars {
+  margin: 3em 0 3em;
+}
+
+
+.product-particulars-box {
+  border: 1px solid #e3e3e3;
+  padding: 2em 1.2em;
+  letter-spacing: 0.5em;
+  text-align: center;
+  line-height: 3em;
+  img {                            //重要样式代码，需要配合application.js的自适应代码块一起使用
+    max-width:100%;
+    height:auto;
+    }
+}
+
 
 //----评论区----
 .review-comment-form {
@@ -116,3 +171,17 @@
 .review-hr {
   padding: 0 3em;
 }
+
+
+// /*排序*/
+// .orderList {
+//   margin: 40px auto;
+//   width: 1200px;
+//   overflow: hidden;
+// }
+// .orderList-item {
+//   float: left;
+//   width: 108px;
+//   height: 60px;
+//   line-height: 60px;
+// }
