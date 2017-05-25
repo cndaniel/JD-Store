@@ -19,16 +19,6 @@
 //= require_tree .
 
 
-// // 图片自适应大小支持代码块
-//   // 在product/show.html.erb的页面中，对img图片用这一格式进行校正
-//   // 让图片在大于div宽度时自动缩小不而溢出，确保版面的公正和美观
-//   function ReImgSize(){
-//     for (j=0;j<document.images.length;j++)
-//     {
-//       document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width;
-//     }
-//   }
-
 
 
 
@@ -52,5 +42,17 @@ $(window).scroll(function () {
     $('#gotop').fadeIn() // 当页面向下滚动的距离大于500px时，慢慢地显示「回到顶部按钮」
   } else {
     $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
+
   }
-})
+}
+
+
+// // 图片自适应大小支持代码块
+//   // 在product/show.html.erb的页面中，对img图片用这一格式进行校正
+//   // 让图片在大于div宽度时自动缩小不而溢出，确保版面的公正和美观
+//   function ReImgSize(){
+//     for (j=0;j<document.images.length;j++)
+//     {
+//       document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width;
+//     }
+//   }
