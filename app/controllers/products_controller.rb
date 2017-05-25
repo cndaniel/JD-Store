@@ -104,6 +104,6 @@ def search
   private
 
  def product_params
-   params.require(:product).permit(:title, :description, :price, :quantity, :is_hidden)
+   params.require(:product).permit(:title, :description, :price, :quantity, :is_hidden, :particulars)
  end
 end
