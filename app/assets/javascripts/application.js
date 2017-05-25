@@ -14,7 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require bootstrap-wysihtml5
+//= require bootstrap-wysihtml5/locales/zh-CN
 //= require_tree .
+
+
+
+
+
+
 
 
 //---轮播图---
@@ -34,12 +42,17 @@ $(window).scroll(function () {
     $('#gotop').fadeIn() // 当页面向下滚动的距离大于500px时，慢慢地显示「回到顶部按钮」
   } else {
     $('#gotop').fadeOut() // 否则慢慢地隐藏「回到顶部按钮」
-  }
-})
 
-//---商品细节内容切换--
-$(document).on('click', '.productDecription-menuList-item', function () {
-  var index = $(this).index() //拿到这个「选项卡」的index，第一个是0，第二个是1，以此类推
-  $('.productDecription-content-item').hide() //所有的内容都隐藏
-  $('.productDecription-content-item').eq(index).show() //只显示对于index的内容
-})
+  }
+}
+
+
+// // 图片自适应大小支持代码块
+//   // 在product/show.html.erb的页面中，对img图片用这一格式进行校正
+//   // 让图片在大于div宽度时自动缩小不而溢出，确保版面的公正和美观
+  function ReImgSize(){
+    for (j=0;j<document.images.length;j++)
+    {
+      document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width;
+    }
+  }

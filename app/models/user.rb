@@ -29,4 +29,7 @@ class User < ApplicationRecord
     participated_products.delete(product)
   end
 
+#----评论功能---
+has_many :comments
+
 end

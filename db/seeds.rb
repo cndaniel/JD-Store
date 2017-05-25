@@ -33,7 +33,7 @@ Product.create!(title: "冬茸",
                 ",
   price: 10,
   quantity: 5,
-  image: open("https://ooo.0o0.ooo/2017/05/17/591c101a38cd2.png")
+  image: open("")
   )
 
 Product.create!(title: "野生结晶蜂蜜",
@@ -49,7 +49,7 @@ Product.create!(title: "野生结晶蜂蜜",
                 ",
   price: 10,
   quantity: 5,
-  image: open("https://ooo.0o0.ooo/2017/05/17/591c117775ebd.png")
+  image: open("")
   )
 
 Product.create!(title: "野生滇橄榄",
@@ -64,7 +64,7 @@ Product.create!(title: "野生滇橄榄",
                 ",
   price: 10,
   quantity: 5,
-  image: open("https://ooo.0o0.ooo/2017/05/17/591c11ffc6eed.png")
+  image: open("")
   )
 
 Product.create!(title: "茨竹笋",
@@ -80,5 +80,5 @@ Product.create!(title: "茨竹笋",
                 ",
   price: 10,
   quantity: 5,
-  image: open("https://ooo.0o0.ooo/2017/05/17/591c1287f4026.png")
+  image: open("")
   )

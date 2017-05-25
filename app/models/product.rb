@@ -29,4 +29,9 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :collects
   has_many :members, through: :collects, source: :user
+
+
+#----评论功能---
+has_many :comments
+
 end

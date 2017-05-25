@@ -2,124 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*搜索栏 购物车*/
-.header {
-  width: 1200px;
-  margin: 50px auto;
 
+.product-list-style {
+    margin: 3em auto 2em
 }
-.headerContent {
-  height: 60px;
-}
-
-.search {
-  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
-  width: 500px;
-  margin-top: 10px; /*上边距*/
-  position: relative; /*相对定位*/
-
-}
-
-.search-input {
-  width: 500px;
-  height: 50px;
-  line-height: 50px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
-  color: #131418;
-  padding: 4px 20px; /*调一下上下左右边距*/
-  border-width: 2px; /*边框宽度为2px*/
-  border-color: #212121; /*设置边框颜色为红色*/
-  border-style: solid; /*设置为实线*/
-  font-size: 14px; /*字体14px*/
-  font-family: "microsoft yahei"; /*设置成微软雅黑字体*/
-  border-radius: 20px; /*圆角20px*/
-}
-
-.search-button {
-  width: 54px;
-  height: 50px;
-  border: none; /*去掉button默认的border*/
-  background: none; /*去掉button默认的背景颜色*/
-  font-family: "Microsoft YaHei";
-  font-size: 16px;
-  position: absolute; /*绝对定位*/
-  cursor: pointer; /*鼠标一上去，显示手型*/
-  top: 0;
-  right: 0;
-}
-
-.search-button .fa-search {
-  color: #131418; /*搜索图标的颜色*/
-}
-
-.cart-wrap {
-  float: right; /*logo、seatch、cart这三个模块都是用div包起来的，是block元素，如果要处于同一行，那就要加float*/
-  margin-top: 15px; /*上边距*/
-  margin-left: 80px; /*左边距*/
-}
-
-.cart {
-  padding: 8px 20px; /*加内边距*/
-  cursor: pointer; /*鼠标一上去，显示手型*/
-  border: 1px solid #F2F9F1; /*1像素，实线，灰色*/
-  background: #F2F9F1; /*灰色背景*/
-  font-size: 12px; /*字体小一点好看*/
-}
-
-.fa-shopping-cart {
-  color: #131418; /*红色图标*/
-  font-size: 16px; /*图标大一点好看*/
-  margin-right: 10px; /*右边距*/
-}
-
-.cart a {
-  color: #6D6D6D; /*灰色字体*/
-  text-decoration: none; /*不要下划线*/
-}
-
-.cart a:hover {
-  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
-  text-decoration: none;
-}
-
-
-/*分类行*/
-
-.menu {
-  width: 100%;
-  background: #EAEAEA;
-}
-
-.menuList {
-  width: 1400px;
-  margin: 20px auto;
-  height: 65px;
-  line-height: 65px;
-}
-
-.menuList-item {
-  float: left;
-  width: 120px;
-  margin-right: 30px;
-}
-
-
-.menu a {
-  font-size: 20px;
-  color: #000; /*灰色字体*/
-}
-.menu a:hover {
-  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
-  text-decoration: none; /*不要下划线*/
-}
-
 
 //-- product/index产品列表样式 --//
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
   }
-
-
 
 .productList {
  display: block;
@@ -158,7 +50,7 @@
 
 .productList-content {
  padding:15px;
- text-align:left;
+ text-align: center;
 }
 
 .productList-title {
@@ -173,188 +65,123 @@
 }
 
 
-/*排序*/
-.orderList {
-  margin: 40px auto;
-  width: 1200px;
-  overflow: hidden;
-}
-.orderList-item {
-  float: left;
-  width: 108px;
-  height: 60px;
-  line-height: 60px;
-}
 
-/*商品信息*/
 
+//product-detail
+
+//--- 路径 ---
 .location {
-	line-height: 30px;
-	padding-bottom: 3px;
+	line-height: 40px;
   font-size: 20px;
-  font-style: italic;
 
 }
 
-.productDetail {
-	width: 1200px;
-	margin: 20px auto;
-	height: 500px;
+//页面头部微调
+.product-show {
+  margin-top: 1em;
 }
 
-.productDetail-left {
-	float: left; /*你去左边*/
-	width: 600px;
-	height: 500px;
+// 商品标题样式
+.product-title {
+  color: #7f8c8d;
+  letter-spacing: 0.5em;
 }
 
-.productDetail-left-bigImage {
-	width: 580px;
-	height: 400px;
+// 商品简述样式
+.product-description {
+  margin: 1.5em auto 3em;
+  line-height: 3em;
+  letter-spacing: 0.5em;
 }
 
-.productDetail-left-imageList {
-	margin-top: 15px;
+// 商品价格样式
+.product-price-bgcolor {
+  background-color: #ddd;
+  padding: 1.5em 1em;
+  margin-bottom: 1em;
 }
 
-.productDetail-left-imageList-item  {
-	float: left; /*虽然我们是block元素，但是我们还是想在同一行呀，那就用float吧*/
-	width: 150px;
-	height: 100px;
-	margin-right: 15px;
+.product-price {
+  font-size: 3em;
+  font-weight: lighter;
+  color: #7f8c8d;
+ }
+
+  //商品库存样式
+  .product-quantity {
+    margin: 1.5em auto;
+  }
+
+  // 按钮区域样式
+.add-to-cart-buttom {
+  margin: 1em auto 5em;
+  }
+
+
+  // 收藏按钮
+.product-collection {
+  line-height: 2em;
+  }
+
+//---商品详情区--
+.product-particulars {
+  margin: 3em 0 3em;
 }
 
-.productDetail-left-imageList-lastItem {
-	margin-right: 0;
-}
 
-//--- 切换动图 ----
-.preview {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  @media screen and (max-width: 1200px) {
-    .preview {
-      margin-bottom: 20px; } }
-
-.preview-pic {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-
-.preview-thumbnail.nav-tabs {
-  border: none;
-  margin-top: 15px; }
-  .preview-thumbnail.nav-tabs li {
-    width: 18%;
-    margin-right: 2.5%; }
-    .preview-thumbnail.nav-tabs li img {
-      max-width: 100%;
-      display: block; }
-    .preview-thumbnail.nav-tabs li a {
-      padding: 0;
-      margin: 0; }
-    .preview-thumbnail.nav-tabs li:last-of-type {
-      margin-right: 0; }
-
-  .tab-content {
-  overflow: hidden; }
-  .tab-content img {
-    width: 100%;
-    -webkit-animation-name: opacity;
-            animation-name: opacity;
-    -webkit-animation-duration: .3s;
-            animation-duration: .3s; }
-
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(3);
-            transform: scale(3); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-@keyframes opacity {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(3);
-            transform: scale(3); }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
-
-
-//---商品细节上半部分右边---
-.productDetail-right {
-	float: right; /*你去右边*/
-	width: 600px;
-	height: 500px;
-}
-
-.intro-text {
-	width: 600px;
-}
-
-.intro-text-desc {
-	margin-top: 15px;
-}
-
-.intro-text-value {
-	height: 10px;
-
-}
-
-.intro-text-service {
-	height: 10px;
-
-}
-
-.intro-text-car {
-  margin-top: 20px;
-}
-
-//--商品细节下半部分---
-
-.productDecription {
-	width: 1200px;
-	margin: 50px auto;
-	border: 1px solid #D8D8D8;
-}
-
-.productDecription-menuList {
-	height: 50px;
-
-}
-
-.productDecription-menuList-item {
-	float: left;
-	width: 175px;
-	height: 45px;
-  line-height: 45px;
-  border: 1px solid #D8D8D8;
-  background: #EAEAEA;
+.product-particulars-box {
+  border: 1px solid #e3e3e3;
+  padding: 2em 1.2em;
+  letter-spacing: 0.5em;
   text-align: center;
-
+  line-height: 3em;
+  img {                            //重要样式代码，需要配合application.js的自适应代码块一起使用
+    max-width:100%;
+    height:auto;
+    }
 }
 
-.productDecription-content {
-	width: 1000px;
-	height: 500px;
-	margin: 50px auto;
+
+//----评论区----
+.review-comment-form {
+  text-align: left;
+  padding: 2em 3em;
 }
 
-.productDecription-content-item {
-  display: none;
-  width: 1000px;
-  height: 500px;
+.review-comment-button {
+  text-align: left;
+  padding: 0 3em;
 }
+
+.review {
+  text-align: left;
+  li {
+    list-style: none;
+  }
+}
+
+.review-user-email {
+  font-weight: lighter;
+}
+
+.review-comment {
+  margin: 2em auto;
+}
+
+.review-hr {
+  padding: 0 3em;
+}
+
+
+// /*排序*/
+// .orderList {
+//   margin: 40px auto;
+//   width: 1200px;
+//   overflow: hidden;
+// }
+// .orderList-item {
+//   float: left;
+//   width: 108px;
+//   height: 60px;
+//   line-height: 60px;
+// }
