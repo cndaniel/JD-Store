@@ -43,7 +43,6 @@
   }
 
 
-
  //---------Navbar---------
   .navbar-style {
     height: 80px;
@@ -52,7 +51,7 @@
   }
 
   .navbar-brand {
-      color: #d76363;
+
       line-height: 50px;
       letter-spacing: 0.5em;                      //拉开一点点字间距
       font-weight:lighter;                        //字体粗细比默认样式缩小100磅值，让logo显得精致高级
@@ -83,7 +82,7 @@
   }
 
    .navbar-collapse {
-     border-color: #FF6F00;
+     background: #EAEAEA;
    }
 
 //---------Box---------
@@ -300,7 +299,7 @@
     }
 
     /* 购物车*/
-    
+
     .fa-shopping-cart {
       color: #131418; /*红色图标*/
       margin-right: 10px; /*右边距*/
