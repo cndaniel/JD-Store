@@ -36,22 +36,38 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'letter_opener', group: :development
+
 gem 'aasm'
+# 商品位置调整
 gem 'acts_as_list'
+
+# 搜索
 gem 'ransack'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+
+# 搜索高亮
 gem 'seo_helper'
+
+# model 流程图
 gem 'rails-erd'
+
+# 7牛
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
+
+# 机密信息管理
 gem 'figaro'
+
+# 产品端debug（heroku）
 gem 'airbrake', '~> 5.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  # gem 'byebug', platform: :mri
+# debug
+  gem 'byebug', platform: :mri
   gem 'pry'
+# 升级版金手指
   gem 'awesome_rails_console'
   gem 'sqlite3'
 end
