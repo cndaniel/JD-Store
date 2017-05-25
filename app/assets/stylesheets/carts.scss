@@ -1,3 +1,54 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.clean_carts {
+  padding-top: 50px;
+}
+
+// 整体样式
+.shoping-cart {
+  margin-top: 20px;
+}
+
+// 列表表头样式
+.cart-column-head {
+background: #323232;
+padding: 20px 0 40px 0;
+margin-bottom: 30px;
+color: #fff;
+label {
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 0.7em;                      //拉开一点点字间距
+  font-weight:lighter;                        //字体粗细比默认样式缩小100磅值，让logo显得精致高级
+}
+}
+
+//购物车商品
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    height: auto;
+    width: 120px;
+  }
+}
+
+// 合计
+.product-price-totle {
+  font-size: 4em;
+  color: #7f8c8d;
+  font-weight:lighter;
+}
+
+//按钮
+.cart-buying-buttom {
+  margin: 1.2em auto 3em;
+}
+
+#cart-index-submit {
+    width: 30%;
+    border-radius: 0;
+}
