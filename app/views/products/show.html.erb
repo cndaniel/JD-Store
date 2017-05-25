@@ -14,7 +14,7 @@
 
 
     <!-- 主图 -->
-    <div class="col-md-5">
+    <div class="col-md-6">
       <% if @product.image.present? %>
         <%= image_tag(@product.image.medium.url, class: "thumbnail img-responsive") %>
       <% else %>
@@ -23,7 +23,7 @@
     </div>
 
     <!-- 商品信息 -->
-    <div class="col-md-7">
+    <div class="col-md-6">
 
       <!-- 商品标题 -->
       <h2 class="product-title"><%= @product.title %></h2>
@@ -48,12 +48,7 @@
           <div class="product-quantity">
             库存量： <%= @product.quantity %>
           </div>
-
-          <!-- 商品产地 -->
-          <div class="product-quantity">
-            生产地： <%= @product.quantity %> （正品保障）
-          </div>
-        </div>
+        </div>      
 
         <div class="col-sm-6">
           <!-- 商品类别 -->
@@ -61,10 +56,6 @@
             类别： <%= @product.category.name %>
           </div>
 
-          <!-- 商品服务 -->
-          <div class="product-quantity">
-            包邮： 99元起包邮 | 7天无忧退货
-          </div>
         </div>
       </div>
 
@@ -100,7 +91,7 @@
     <!-- 商品详情区域 + 推荐展示 -->
     <div class="container">
         <!-- 商品详情区域 + 商品评论区域 -->
-        <div class="col-md-9 product-particulars">
+        <div class="col-md-12 product-particulars">
 
 
           <!-- 导航栏 -->
@@ -163,7 +154,17 @@
 
 
 
-        <!-- 购物指南区 -->
+
+
+
+
+
+
+
+
+
+
+        <!-- 购物指南区
         <div class="col-md-3">
           <div class="product-recommend">
             <h5>购物指南</h5>
