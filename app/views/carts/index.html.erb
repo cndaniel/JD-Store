@@ -37,7 +37,7 @@
           <!-- 商品图片 -->
           <div class="product-list row text-center">
             <div class="col-xs-2 product-image-cart">
-              <%= link_to product_path(cart_item.product) do%>
+              <%= link_to product_path(cart_item.product) do %>
                 <% if cart_item.product.image.present? %>
                   <%= image_tag(cart_item.product.image.thumb.url, class: "img-responsive center-block") %>
                 <% else %>
