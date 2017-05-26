@@ -31,7 +31,8 @@
     padding-bottom: 450px;                                  // 腾出navbar的遮挡空间
     font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
     color: #666;                                        // 修改全站的 字体主色
-    font-size: 1.5em;                                   // 网站所有字体缩小比例
+    font-size: 1.5em;
+    background-color: #EAEAEA;                                  // 网站所有字体缩小比例
    a {                                                 // 所有a标签统一样式
      color: #666;                                      // 链接反转的样式
      transition: 0.5s;                                 // 鼠标移开时 0.5秒渐变
@@ -283,37 +284,40 @@
             background-repeat: no-repeat;
             background-size: cover;
             margin-bottom: 80px;
-            padding-bottom: 100px;
-            padding-top: 10px;
+            padding-bottom: 50px;
+            padding-top: 50px;
       }
 
       .box-inner {
-          background-color: rgba(250, 250, 250, 0.69);
+          background-color: rgba(149, 149, 149, 0.69);
           padding-bottom: 5px;
-          margin-top: 300px;
-          margin-bottom: 300px;
-          width: 400px;
+          margin-top: 100px;
+          margin-bottom: 100px;
+          width: 500px;
           border-radius: 20px;
+          padding-left: 28px;
 
       }
 
       .title {
           text-align: center;
-          margin-bottom: 80px;
+          margin-bottom: 45px;
           letter-spacing: 0.5em;                              //拉开一点点字间距
           font-weight:lighter;                                //字体粗细比默认样式缩小100磅值，让logo显得精致高级
           font-size: 3.0em;
           color: #d76363;
           line-height: 50px;
+          margin-right: 18px;
       }
 
       .slogan {
-               color: #222;
-               margin-top: 10px;
-               margin-bottom: 50px;
+               color: #d76363;
+               letter-spacing: 1em;
+               font-weight:lighter;
+               font-size: 2.5em;
+               margin-bottom: 35px;
                text-align: center;
-               font-size: 25px;
-               top: 12px;
+
            }
 
 
@@ -321,7 +325,16 @@
           margin-bottom: 60px;
           text-align: center;
           color: white;
-      }
+          width: 92%;
+        }
+
+        #lead-submit {
+
+          width: 45%;
+          letter-spacing: 0.5em;
+          font-size: 1.2em;
+
+        }
 
 
       //---------Content---------
