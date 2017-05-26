@@ -65,6 +65,10 @@ gem 'airbrake', '~> 5.4'
 # 文本编辑器支持gem
 gem 'bootstrap-wysihtml5-rails'
 
+# 客服系统
+gem 'intercom-rails'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 # debug
