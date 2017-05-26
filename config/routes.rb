@@ -30,6 +30,9 @@ Rails.application.routes.draw do
     end
     collection do
       get :search
+      get :run     #润系列
+      get :yuan    #源系列
+      get :zhen    #臻系列
     end
     resources :comments
   end

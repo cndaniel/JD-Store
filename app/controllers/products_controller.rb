@@ -2,52 +2,16 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :jion, :quit]
   before_action :validate_search_key, only: [:search]
 
+  def index
+  @products = Product.where(:is_hidden => false).order("position ASC")
+  end
+
   def show
     @product = Product.find(params[:id])
     @comments = @product.comments.recent.paginate(:page => params[:page], :per_page => 5)
     @comment = Comment.new
   end
 
-  def index
-    if params[:category].blank?
-      @products = Product.where(:is_hidden => false).order("position ASC")
-    else
-      @category_id = Category.find_by(name: params[:category]).id
-      @products = Product.where(:category_id => @category_id).order("created_at DESC")
-    end
-  end
-
-  def new
-    @product = Product.new
-  end
-
-  def create
-    @product = Product.new(product_params)
-    if @product.save
-      redirect_to products_path
-    else
-      render :new
-    end
-  end
-
-  def edit
-    @product = Product.find(params[:id])
-  end
-
-  def update
-    @product = Product.find(params[:id])
-    if @product.update(product_params)
-      redirect_to products_path
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to products_path
-  end
 
   def add_to_cart
      @product = Product.find(params[:id])
@@ -59,6 +23,20 @@ class ProductsController < ApplicationController
     end
      redirect_to :back
    end
+
+  # --分类--
+
+  def yuan
+     @products = Product.where(:category => "源系").where(:is_hidden => false).order("position ASC")
+   end
+
+  def run
+    @products = Product.where(:category => "润系").where(:is_hidden => false).order("position ASC")
+  end
+
+  def zhen
+     @products = Product.where(:category => "臻系").where(:is_hidden => false).order("position ASC")
+  end
 
   # --收藏--
    def join

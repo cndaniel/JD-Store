@@ -23,7 +23,7 @@
 </div>
 
 <div class="group">
-<%= select_tag(:category_id, options_for_select(@categories), :prompt => "种类") %>
+<%= f.input :category, as: :radio_buttons, collection: [['源系', '源系'], ['润系', '润系'], ['臻系', '臻系']],required: '源系', :label => "商品类型" %>
 </div>
 
 <div class="group">

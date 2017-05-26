@@ -2,16 +2,7 @@
  <div class="container product-show">
       <div class="row">
 
-         <!-- 商品路径 -->
-                    <p class="location"><%= link_to("首页", products_path)%> >
-                        <% Category.all.each do |category| %>
-                            <% if @product.category.name == category.name %>
-                                  <%= link_to category.name, products_path(category: category.name), class: "link" %>
-                            <% end %>
-                       <% end %>
-                        > <%= @product.title %>
-
-                    </p>
+        
 
 
         <!-- 主图 -->
@@ -59,7 +50,7 @@
                                 <div class="col-sm-6">
                                   <!-- 商品类别 -->
                                           <div class="product-quantity">
-                                                类别： <%= @product.category.name %>
+                                                类别： <%= @product.category %>
                                           </div>
 
                                 </div>

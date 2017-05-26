@@ -105,21 +105,3 @@
       </div>
     </div>
   </div>
-
-
-   分类条
-  <div class="menu ">
-    <ul class="menuList">
-      <ol class="menuList-item">
-        <a href="/">首页</a>
-      </ol>
-      <ol class="menuList-item">
-        <a href="/products">全部商品</a>
-      </ol>
-      <% Category.all.each do |category| %>
-       <ol class="menuList-item">
-         <%= link_to category.name, products_path(category: category.name), class: "link" %>
-       </ol>
-      <% end %>
-    </ul>
-  </div> -->
