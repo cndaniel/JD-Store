@@ -34,17 +34,17 @@ Product.create!(title: "冬茸",
                 ",
   price: 10,
   quantity: 5,
-  image: open("https://ws1.sinaimg.cn/large/006tNbRwgy1ffxmhe8mz5j31kw14h1kz.jpg")
+  image: open("https://ws1.sinaimg.cn/large/006tNbRwgy1ffxmhe8mz5j31kw14h1kz.jpg"),
   particulars: "隶属于澜沧拉祜族自治县
-  远山如黛，人家参差，薄雾笼罩
-  这里便是冬茸的故乡
-  拉祜村民精心人工培植
-  清晨采摘，经烤箱烘至半干后自然晒干
-  保留了这份清晨的美味和营养
-  将这份美味送上餐桌
-  炒肉和煲汤味道绝佳
+                远山如黛，人家参差，薄雾笼罩
+                这里便是冬茸的故乡
+                拉祜村民精心人工培植
+                清晨采摘，经烤箱烘至半干后自然晒干
+                保留了这份清晨的美味和营养
+                将这份美味送上餐桌
+                炒肉和煲汤味道绝佳
   < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/26/5927f6b99149e.jpg\">",
-  category_name: "润",
+  category: "源系",
   )
 
   Product.create!(title: "冬茸",
@@ -60,7 +60,7 @@ Product.create!(title: "冬茸",
                   ",
     price: 10,
     quantity: 5,
-    image: open("https://ws1.sinaimg.cn/large/006tNbRwgy1ffxmhe8mz5j31kw14h1kz.jpg")
+    image: open("https://ws1.sinaimg.cn/large/006tNbRwgy1ffxmhe8mz5j31kw14h1kz.jpg"),
     particulars: "隶属于澜沧拉祜族自治县
     远山如黛，人家参差，薄雾笼罩
     这里便是冬茸的故乡
@@ -70,5 +70,31 @@ Product.create!(title: "冬茸",
     将这份美味送上餐桌
     炒肉和煲汤味道绝佳
     < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/26/5927f6b99149e.jpg\">",
-    category_id: "润",
+    category: "润系",
     )
+
+    Product.create!(title: "冬茸",
+      description: "产自风光无限的竹塘乡蓦乃村
+                    隶属于澜沧拉祜族自治县
+                    远山如黛，人家参差，薄雾笼罩
+                    这里便是冬茸的故乡
+                    拉祜村民精心人工培植
+                    清晨采摘，经烤箱烘至半干后自然晒干
+                    保留了这份清晨的美味和营养
+                    将这份美味送上餐桌
+                    炒肉和煲汤味道绝佳
+                    ",
+      price: 10,
+      quantity: 5,
+      image: open("https://ws1.sinaimg.cn/large/006tNbRwgy1ffxmhe8mz5j31kw14h1kz.jpg"),
+      particulars: "隶属于澜沧拉祜族自治县
+      远山如黛，人家参差，薄雾笼罩
+      这里便是冬茸的故乡
+      拉祜村民精心人工培植
+      清晨采摘，经烤箱烘至半干后自然晒干
+      保留了这份清晨的美味和营养
+      将这份美味送上餐桌
+      炒肉和煲汤味道绝佳
+      < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/26/5927f6b99149e.jpg\">",
+      category: "臻系",
+      )
