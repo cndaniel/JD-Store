@@ -25,6 +25,7 @@ Product.create!(title: "冬茸",
   description: "属大球盖菇，富含氨基酸、维生素等多种物质",
   price: 98,
   quantity: 98,
+  category: "源系",
   image: open("https://ooo.0o0.ooo/2017/05/27/59294543a294f.jpg"),
   particulars: "隶属于澜沧拉祜族自治县
                 远山如黛，人家参差，薄雾笼罩
@@ -33,11 +34,22 @@ Product.create!(title: "冬茸",
                 清晨采摘，经烤箱烘至半干后自然晒干
                 保留了这份清晨的美味和营养
                 将这份美味送上餐桌
-                炒肉和煲汤味道绝佳"
-                https://ooo.0o0.ooo/2017/05/27/592945d669837.jpg
-                https://ooo.0o0.ooo/2017/05/27/5929460f93e16.jpg
-                https://ooo.0o0.ooo/2017/05/27/592945e2d0b3a.jpg,
-  category: "源系",
+                炒肉和煲汤味道绝佳
+                < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/27/592945d669837.jpg\">
+                < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/27/5929460f93e16.jpg\">
+                < img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/27/592945e2d0b3a.jpg\">",
   )
 
+  Product.create!(title: "抽屉式收纳盒",
+   description: "充分利用空间，方便拿取，经久耐用。",
+   price: 99,
+   quantity: 30,
+   category: "润系",
   
+   particulars: "抽屉式设计的pp材质收纳盒<br>
+通过堆叠能充分利用空间，且方便拿取物品<br>
+pp材质安全无毒，经久耐用<br>
+此产品适合存放衣物<br>
+人人必备的经典产品﻿<br><br>
+应用场景< img alt=\"\" src=\"https://ooo.0o0.ooo/2017/05/16/591a9d7354cee.jpg\">",
+   )
