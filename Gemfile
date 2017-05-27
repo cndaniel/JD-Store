@@ -59,9 +59,6 @@ gem 'qiniu-rs'
 # 机密信息管理
 gem 'figaro'
 
-# 产品端debug（heroku）
-gem 'airbrake', '~> 5.4'
-
 # 文本编辑器支持gem
 gem 'bootstrap-wysihtml5-rails'
 
