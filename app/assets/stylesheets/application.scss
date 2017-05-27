@@ -47,21 +47,29 @@
 
  //---------Navbar---------
  .navbar-style {
-    height: 80px;
+    height: 60px;
     background-color: #57584f;
     border-color: transparent;                          //边框颜色设置为 透明
   }
 
   .navbar-default .navbar-brand {
       color: #EAEAEA;
-   }
+    }
+
+    .input-sm {
+    height: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
 
    .navbar-brand {
-     line-height: 60px;
+     line-height:30px;
      letter-spacing: 0.5em;                      //拉开一点点字间距
      font-weight: lighter;;                        //字体粗细比默认样式缩小100磅值，让logo显得精致高级
      padding-left: 60px;
-     font-size: 3em;
+      font-size: 1.3em;
    }
 
    .navbar-default .navbar-brand:hover,
@@ -70,7 +78,7 @@
      background-color: transparent;
    }
   .navbar-default .navbar-nav > li > a {
-   padding: 26px 46px;
+   padding: 20px 20px;
    color: #EAEAEA;
   }
 
@@ -285,6 +293,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             margin-bottom: 80px;
+            margin-top: -20px;
             padding-bottom: 50px;
             padding-top: 50px;
       }
