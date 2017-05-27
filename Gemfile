@@ -60,7 +60,7 @@ gem 'qiniu-rs'
 gem 'figaro'
 
 # 产品端debug（heroku）
-gem 'airbrake', '~> 5.4'
+
 
 # 文本编辑器支持gem
 gem 'bootstrap-wysihtml5-rails'
@@ -88,4 +88,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :production do
   gem 'pg'
+  gem 'airbrake', '~> 5.4'
 end
